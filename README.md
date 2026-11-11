@@ -150,7 +150,8 @@ bash tools/record.sh 13 60 demo.mp4   # record a demo video with sound (needs ff
 **Releasing:** bump `version` in package.json and push to `main`. GitHub Actions builds and signs all four apps and publishes them as a Release (tags `v*` and Actions → release → Run workflow work too):
 
 ```bash
-git tag v0.6.0 && git push origin v0.6.0
+# bump "version" in package.json, then:
+git push origin main
 ```
 
 ### Project layout
