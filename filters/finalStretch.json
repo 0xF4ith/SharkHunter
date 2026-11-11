@@ -1,0 +1,223 @@
+{
+  "filters": {
+    "protocols": {
+      "Pump": true,
+      "Mayhem": false,
+      "Stonkfun": false,
+      "Bonk": true,
+      "Bonkers": false,
+      "Bags": false,
+      "Believe": false,
+      "Jupiter Studio": false,
+      "Moonshot": false,
+      "Heaven": false,
+      "Bordrless": true,
+      "Boop": false,
+      "Sugar": false,
+      "Rise Rich": true,
+      "Rise Pro": true,
+      "pve.win": true,
+      "Liquid": true,
+      "Vertigo": true,
+      "Surge": false,
+      "Soar": false,
+      "Printr": false,
+      "Daos.fun": false,
+      "Candle": false,
+      "MetaDAO": true,
+      "Moonit": false,
+      "Wavebreak": false,
+      "Pangea": true,
+      "LaunchLab": false,
+      "Dynamic BC": false,
+      "Pump AMM": false,
+      "Raydium V4": false,
+      "Raydium CPMM": false,
+      "Raydium CLMM": false,
+      "PancakeSwap CLMM": false,
+      "Meteora AMM V1": false,
+      "Meteora AMM V2": false,
+      "Meteora DLMM": false,
+      "Meteora DLMM Pro": false,
+      "Orca": false,
+      "Liquid AMM": true,
+      "Pump Raydium": true,
+      "SPL Token": true,
+      "Axiom Router": true
+    },
+    "searchKeywords": [],
+    "excludeKeywords": [],
+    "twitterHandles": [],
+    "excludeTwitterHandles": [],
+    "devWallets": [],
+    "excludeDevWallets": [],
+    "devSoldAll": false,
+    "excludeVamped": false,
+    "ogOnly": false,
+    "originalSocials": false,
+    "dexPaid": false,
+    "showPumpOffchain": true,
+    "showHolderRewards": true,
+    "showUsePaid": true,
+    "showBoosted": false,
+    "riseProDegen": true,
+    "age": {
+      "max": 45,
+      "min": null,
+      "maxUnit": "minutes",
+      "minUnit": "minutes"
+    },
+    "top10Holders": {
+      "max": 50,
+      "min": null
+    },
+    "devHolding": {
+      "max": 10,
+      "min": null
+    },
+    "snipers": {
+      "max": 25,
+      "min": null
+    },
+    "insiders": {
+      "max": null,
+      "min": null
+    },
+    "bundle": {
+      "max": 30,
+      "min": null
+    },
+    "freshWalletsHoldPercent": {
+      "max": null,
+      "min": null
+    },
+    "proTradersHoldPercent": {
+      "max": null,
+      "min": null
+    },
+    "kolCount": {
+      "max": null,
+      "min": null
+    },
+    "calloutCount": {
+      "max": null,
+      "min": null
+    },
+    "holders": {
+      "max": null,
+      "min": null
+    },
+    "botUsers": {
+      "max": null,
+      "min": 30
+    },
+    "bondingCurve": {
+      "max": null,
+      "min": null
+    },
+    "liquidity": {
+      "max": null,
+      "min": null
+    },
+    "volume": {
+      "max": null,
+      "min": 10000
+    },
+    "netBuy": {
+      "max": null,
+      "min": null
+    },
+    "marketCap": {
+      "max": null,
+      "min": 10000
+    },
+    "fees": {
+      "max": null,
+      "min": null
+    },
+    "txns": {
+      "max": null,
+      "min": null
+    },
+    "numBuys": {
+      "max": null,
+      "min": null
+    },
+    "numSells": {
+      "max": null,
+      "min": null
+    },
+    "numMigrations": {
+      "max": null,
+      "min": null
+    },
+    "numDevPairs": {
+      "max": null,
+      "min": null
+    },
+    "devMigrationsPercent": {
+      "max": null,
+      "min": null
+    },
+    "devMigrationsMinLaunches": null,
+    "tweetAgeMins": {
+      "max": null,
+      "min": null,
+      "maxUnit": "minutes",
+      "minUnit": "minutes"
+    },
+    "twitter": {
+      "max": null,
+      "min": null
+    },
+    "twitterRenames": {
+      "max": null,
+      "min": null
+    },
+    "twitterFollowers": {
+      "max": null,
+      "min": null
+    },
+    "twitterFollowing": {
+      "max": null,
+      "min": null
+    },
+    "twitterExists": false,
+    "website": false,
+    "telegram": false,
+    "tiktok": false,
+    "atLeastOneSocial": false,
+    "twitterProfileOnly": false,
+    "twitterAbsent": false,
+    "onlyTwitterLinked": false,
+    "isStreaming": false,
+    "userCount": {
+      "max": null,
+      "min": null
+    },
+    "imgReuseCount": {
+      "max": null,
+      "min": null
+    },
+    "originalAvatar": false,
+    "xReuse": {
+      "max": null,
+      "min": null
+    },
+    "hideReusedX": false,
+    "hideReusedXAbove": null,
+    "excludeMintable": false,
+    "excludeFreezable": false,
+    "excludeTransferHook": false,
+    "lpBurnt": false,
+    "showQuoteTokens": {
+      "sol": true,
+      "usdc": true,
+      "usd1": true,
+      "usdt": true,
+      "stock": true,
+      "other": true
+    }
+  },
+  "tab": "finalStretch"
+}

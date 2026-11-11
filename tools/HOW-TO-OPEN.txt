@@ -1,0 +1,31 @@
+SHARKHUNTER by @0xF4ith
+=======================
+
+WINDOWS
+  Double-click SharkHunter.exe.
+  If Windows shows "Windows protected your PC": click "More info", then "Run anyway".
+  Looks best in Windows Terminal (right-click the folder > Open in Terminal > type .\SharkHunter.exe).
+
+MAC
+  First time only: right-click SharkHunter > Open > Open.
+  (A normal double-click says "unidentified developer" the first time. That's macOS being careful
+   with apps that aren't from the App Store. If there's no Open button, go to
+   System Settings > Privacy & Security and click "Open Anyway".)
+  After that, double-click works. Colors look best in iTerm2 (free).
+
+LINUX
+  In a terminal:  ./sharkhunter
+
+CONTROLS
+  menu:     total balance (min 0.25), per trade (min 0.01), stop loss %, START
+            arrow keys to move, type numbers, enter on START
+  running:  tab = positions/pnl   s = stop/start trading   m = sound   q = quit
+  mouse clicks work on tabs and buttons.
+
+The window should be at least 150 x 46. Maximize it if the app asks.
+
+YOUR OWN AXIOM FILTERS
+  Replace the .json files in the "filters" folder with your own Axiom exports
+  (newPairs / finalStretch / migrated).
+
+Paper trading: no real orders, no wallet.

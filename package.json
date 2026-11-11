@@ -1,0 +1,37 @@
+{
+  "name": "sharkhunter",
+  "version": "0.6.0",
+  "description": "Terminal rug radar: Axiom filter presets x Claude agents. by @0xF4ith",
+  "bin": {
+    "sharkhunter": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "snapshot": "node src/index.js --snapshot 33 --seed 13",
+    "record": "bash tools/record.sh",
+    "build": "pkg . --no-bytecode --public-packages \"*\" --public --compress GZip --out-path dist"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "pkg": {
+    "scripts": [
+      "src/**/*.js"
+    ],
+    "assets": [
+      "filters/*.json",
+      "assets/*.wav"
+    ],
+    "targets": [
+      "node22-win-x64",
+      "node22-macos-x64",
+      "node22-macos-arm64",
+      "node22-linux-x64"
+    ],
+    "outputPath": "dist"
+  },
+  "devDependencies": {
+    "@yao-pkg/pkg": "^6.25.0"
+  }
+}

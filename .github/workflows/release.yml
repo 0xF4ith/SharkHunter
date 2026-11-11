@@ -1,0 +1,32 @@
+# Builds SharkHunter apps for Windows, macOS (Apple Silicon + Intel) and Linux
+# and attaches them to a GitHub Release. Trigger: push a tag like v0.5.0
+#   git tag v0.5.0 && git push origin v0.5.0
+name: release
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-14   # a Mac, so the macOS apps can be signed
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm run build
+      - name: sign macOS apps (ad-hoc, required on Apple Silicon)
+        run: |
+          codesign --force --sign - dist/sharkhunter-macos-arm64
+          codesign --force --sign - dist/sharkhunter-macos-x64
+      - name: package
+        run: bash tools/package.sh
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: release/*
+          generate_release_notes: true
