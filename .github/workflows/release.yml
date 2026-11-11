@@ -1,14 +1,20 @@
 # Builds SharkHunter apps for Windows, macOS (Apple Silicon + Intel) and Linux
-# and attaches them to a GitHub Release. Trigger: push a tag like v0.5.0
-#   git tag v0.5.0 && git push origin v0.5.0
+# and publishes them as a GitHub Release named after the version in package.json.
+# Runs on every push to main, on version tags, or by hand (Actions > release > Run workflow).
 name: release
 on:
   push:
+    branches: [main]
     tags: ['v*']
+    paths-ignore: ['**.md', 'docs/**']
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -26,7 +32,23 @@ jobs:
           codesign --force --sign - dist/sharkhunter-macos-x64
       - name: package
         run: bash tools/package.sh
+      - name: version
+        id: v
+        run: echo "tag=v$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
       - uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ steps.v.outputs.tag }}
+          name: SharkHunter ${{ steps.v.outputs.tag }}
+          target_commitish: ${{ github.sha }}
           files: release/*
-          generate_release_notes: true
+          make_latest: true
+          body: |
+            ## Download
+            | System | File |
+            |---|---|
+            | Windows | `SharkHunter-windows.zip`: unzip, double-click `SharkHunter.exe` (More info → Run anyway) |
+            | Mac M1/M2/M3/M4 | `SharkHunter-mac-apple-silicon.zip`: unzip, right-click `SharkHunter` → Open |
+            | Mac Intel | `SharkHunter-mac-intel.zip`: same as above |
+            | Linux | `SharkHunter-linux.tar.gz`: `./sharkhunter` |
+
+            Paper trading: no real orders, no wallet. See the README for the full guide.
